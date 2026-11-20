@@ -24,4 +24,6 @@ Every push to `main` will rebuild and publish the site.
 
 The Google Sheets connector runs in the browser and needs a Google OAuth web client ID. Configure the deployed site's JavaScript origin in Google Cloud and enter the client ID in **Settings**. Google may require a domain you control for production OAuth; a custom domain can be connected to GitHub Pages if needed. Do not commit OAuth client secrets or financial workbooks to this repository.
 
-The first spreadsheet tab is used for `Category` and `Budget` values. Remaining tabs are read as transaction sheets.
+The workbook importer reads the first `Budget` tab, a monthly `Income` tab, and dated expense rows from the month-named tabs.
+
+Personal finance workbooks should not be committed to this public repository. Import your workbook in the browser; imported rows are kept in that browser's local storage.
